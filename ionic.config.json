@@ -1,0 +1,7 @@
+{
+  "name": "test-u2software-frontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
