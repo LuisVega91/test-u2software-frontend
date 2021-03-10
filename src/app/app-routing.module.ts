@@ -16,6 +16,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/proveedores/proveedores.module').then( m => m.ProveedorModule)
   },
   {
+    path: 'inventarios',
+    loadChildren: () => import('./modules/inventarios/inventarios.module').then( m => m.InventariosModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
