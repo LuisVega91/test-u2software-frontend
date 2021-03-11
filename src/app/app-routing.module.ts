@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/inventarios/inventarios.module').then( m => m.InventariosModule)
   },
   {
+    path: 'pedidos',
+    loadChildren: () => import('./modules/pedidos/pedidos.module').then( m => m.PedidosModule)
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'

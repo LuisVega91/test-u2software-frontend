@@ -28,6 +28,10 @@
 
     <ng-container *ngIf=" productos$ | async as productos; else loading">
       <ion-list #listadoProductos>
+        <ion-item>
+          <ion-label>Articulo</ion-label>
+          <ion-label>Precio</ion-label>
+        </ion-item>
 
         <div *ngIf="!error && productos.length > 0">
           <ion-item-sliding *ngFor="let producto of productos">
@@ -41,6 +45,7 @@
 
             <ion-item detail (click)="form(producto.id)">
               <ion-label>{{ producto.nombre }}</ion-label>
+              <ion-label>{{ producto.valor | currency}}</ion-label>
              </ion-item>
 
             <ion-item-options side="end">
